@@ -1,0 +1,835 @@
+/* ---------------------- Global Styles ---------------------- */
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* Body Background */
+body {
+
+    background: white;    
+}
+
+/* ---------------------- Company Logo Styles ---------------------- */
+
+.company-logo {
+
+    width: 100px; /* Logo size */
+    height: auto;
+    margin-right: auto; /* Aligns the logo to the far left */
+}
+
+/* ---------------------- Navbar Styles ---------------------- */
+
+/* Styling the navbar */
+.hero nav {
+
+    background: linear-gradient(90deg, #1a1a1a, #333333); /* Gradient background for a sleek look */
+    width: 100%;
+    padding: 0px 15%; /* Ensure padding around the navbar */
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Places logo on the left and nav items on the right */
+    position: fixed; /* Keep the navbar at the top while scrolling */
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow for depth */
+    opacity: 0.9;
+}
+
+/* Styling the individual navigation items */
+nav ul li {
+
+    display: inline-block;
+    list-style: none;
+    margin: 0 20px;
+    position: relative;
+}
+
+/* Styling the text in the dropdown menu */
+nav ul li a {
+
+    position: relative;
+    color: white;
+    text-decoration: none;
+    padding: 10px 0;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth color transition and scaling effect */
+    font-weight: bold; /* Makes the text bolder */
+    letter-spacing: 0.5px; /* Slightly increase the spacing between letters */
+}
+
+nav ul li a::after {
+
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #ffcc00;
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+    
+    color: #ffcc00;
+    transform: scale(1.04); /* Slightly enlarges the text on hover */
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* ---------------------- Hero Section ---------------------- */
+
+/* Style the overlay */
+
+/* Ensures the hero section is positioned relative to its container */
+.hero {
+
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: #eceaff;
+    color: #525252;
+    box-shadow: 5px 1px 8px rgba(0, 0, 0, 0.14);
+    overflow: hidden; /* This ensures any overflow content is hidden */
+}
+.loi{
+
+    position: relative;
+    width: 100%;
+    /* background: #eceaff; */
+    background: linear-gradient(135deg, #eae3fd, #ffffff);
+    color: #525252;
+    overflow: hidden;
+
+}
+
+/* Styling the nav bar */
+.loi nav{
+
+    background: #1a1a1a;
+    width: 100%;
+    padding: 0px 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+}
+
+.contact{
+    
+    position: relative;
+    width: 100%;
+    /* background: #eceaff; */
+    background: linear-gradient(135deg, #fde3f6, #ffffff);
+    color: #525252;
+    box-shadow: 5px 1px 8px rgba(0, 0, 0, 0.14);
+    overflow: hidden;
+
+}
+
+/* Styling the nav bar */
+.contact nav{
+
+    background: #1a1a1a;
+    width: 100%;
+    padding: 0px 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+}
+.partners{
+
+    position: relative;
+    width: 100%;
+    /* background: #eceaff; */
+    background: linear-gradient(135deg, #fde3f6, #ffffff);
+    color: #525252;
+    box-shadow: 5px 1px 8px rgba(0, 0, 0, 0.14);
+
+}
+
+.partners nav{
+
+    background: #1a1a1a;
+    width: 100%;
+    padding: 0px 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+}
+
+.si{
+
+    width: 100%;
+    background: linear-gradient(135deg, #e4fde3, #ffffff);
+    color: #525252;
+
+}
+
+/* Styling the nav bar */
+.si nav{
+
+    background: #1a1a1a;
+    width: 100%;
+    padding: 0px 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    top: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    z-index:1000;
+}
+
+/* Ensures the background image covers the hero section */
+#home-page-background {
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This makes sure the image covers the entire section */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0; /* This ensures the image is behind the text */
+    opacity: 0.9; /* Adjust the transparency of the background image */
+    background-attachment: fixed;
+}
+
+/* Positions the h1 element absolutely in the center */
+.hero h1 {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 70px; /* Increase the font size */
+    color: #ffcc00; /* Change color to a bright yellow */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Add a shadow for better contrast */
+    z-index: 1; 
+}
+
+/* Positions the p element absolutely below the h1 element */
+.slogan {
+
+    position: absolute;
+    top: 65%; /* Adjust position slightly lower */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px; /* Increase the font size */
+    color: #ffffff; /* Ensure the color stands out */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Add a shadow for better contrast */
+    background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background */
+    padding: 10px 20px; /* Add padding to the text */
+    border-radius: 5px; /* Round the corners */
+    z-index: 1;
+}
+
+
+
+
+/* ---------------------- Sign-in and Login ---------------------- */
+
+/* Sign-in feature */
+.Signin {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: large;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 5px 1px 8px rgba(0, 0, 0, 0.14);
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Login feature */
+.Login {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: large;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 5px 1px 8px rgba(0, 0, 0, 0.14);
+    max-width: 400px;
+    text-align: center;
+}
+
+/* ---------------------- Partnership Application Form ---------------------- */
+
+/*-- creating and styling starter application form -- daren 8/10   */
+.applicationForm {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: large;
+    background-color: #fff;
+    padding: 50px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 1000px;
+    border-radius: 10px;
+    margin-left: 250px;
+    background-color: white;
+}
+
+.applicationForm form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+}
+
+.applicationForm label {
+    display: flex;
+    justify-content: space-between;
+}
+
+.inputboxes {
+
+    width: 350px;
+}
+
+#submitbutton {
+    
+}
+
+/* ---------------------- END Partnership Application Form END ---------------------- */
+/* Centering the login section */
+.entirelogin {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 900px;
+}
+.entirecontact {
+
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+/* Centering the sign-in section */
+.everythingsign {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 900px;
+}
+
+.contactus {
+
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: large;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 5px 1px 8px rgba(0, 0, 0, 0.14);
+    max-width: 600px;
+    text-align: center;
+}
+
+
+/* ---------------------- About Section Dropdown ---------------------- */
+
+/* Wrapping the dropdown menu, initially hidden, positioned relative to the parent item */
+.about-menu-wrap {
+
+    position: absolute;
+    top: 100%;
+    left: -100%; 
+    width: 300px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+    z-index: 1000;
+}
+
+/* Making the dropdown visible when hovering over the parent navigation item */
+nav ul li:hover .about-menu-wrap {
+    max-height: 400px;
+}
+
+/* Styling the dropdown menu container */
+.about-menu {
+
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 20px;
+    z-index: 10000;
+}
+
+/* Styling the horizontal rule within the dropdown menu */
+.about-menu hr {
+
+    border: 0;
+    height: 1px;
+    width: 100%;
+    background: #ccc;
+    margin: 15px 0px 10px;
+    z-index: 10000;
+}
+
+/* Styling the links within the dropdown menu */
+.about-menu-link {
+
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #525252;
+    margin: 12px 0;
+    z-index: 10000;
+}
+
+/* Styling the text within the dropdown links */
+.about-menu-link p {
+    width: 100%;
+    z-index: 10000;
+}
+
+/* Styling the images within the dropdown links (if we choose to add images) */
+.about-menu-link img {
+
+    width: 40px;
+    background: #e5e5e5;
+    border-radius: 50%;
+    margin-right: 15px;
+    z-index: 10000;
+}
+
+/* Styling the arrow or icon in the dropdown links */
+.about-menu-link span {
+    
+    font-size: 17px;
+    font-weight: bolder;
+    transition: transform 0.5s;
+    z-index: 10000;
+}
+
+/* Adding a small shift to the right when hovering over the dropdown link */
+.about-menu-link:hover span {
+    transform: translateX(5px);
+    z-index: 10000;
+}
+
+/* Making the text within the dropdown link bolder on hover */
+.about-menu-link:hover p {
+    font-weight: 600;
+    z-index: 10000;
+}
+
+/* ---------------------- ABOUT PAGE ---------------------- */
+
+/* Scoped styles for About Us page */
+#aboutPage {
+    background: linear-gradient(135deg, #e3f2fd, #ffffff);
+    padding: 60px 20px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+    margin-top: 40px;
+}
+
+/* Styling the background of the profile imgs */
+.profile-img {
+    background-color: lightgray;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid white;
+}
+
+#aboutPage .about-content h1 {
+    font-size: 42px;
+    color: #0d47a1;
+    text-align: center;
+    margin-bottom: 25px;
+    margin-top: 80px;
+    font-weight: 900;
+}
+
+#aboutPage .about-content p {
+    font-size: 20px;
+    color: #333;
+    text-align: center;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+    font-weight: 300;
+}
+
+#aboutPage .founders-section {
+    margin-top: 50px;
+    text-align: center;
+}
+
+#aboutPage .founders-section h2 {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+#aboutPage .founders-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+#aboutPage .founder-card {
+
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+    width: 220px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#aboutPage .founder-card:hover {
+
+    transform: translateY(-10px);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+#aboutPage .founder-card p {
+
+    font-size: 18px;
+    color: black;
+    margin-top: 12px;
+    font-weight: 300;
+}
+
+/* When you hover over the profile containers, the names change to that color */
+#aboutPage .founder-card:hover p {
+
+    color: #ff7043;
+
+}
+
+/*  */
+/*  */
+/*  */
+#contactPage {
+
+    text-decoration: none;
+
+}
+
+/* Styling the background of the profile imgs */
+.profile-img {
+
+    background-color: lightgray;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid white;
+
+}
+
+#contactPage .contact-section {
+
+    margin-top: 50px;
+    text-align: center;
+
+}
+
+#contactPage .contact-section h2 {
+
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 30px;
+
+}
+
+#contactPage .contact-grid1 {
+
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
+    
+}
+#contactPage .contact-grid2 {
+
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
+
+}
+
+#contactPage .contact-text {
+
+    color: rgb(70, 70, 172);
+
+}
+
+#contactPage .contact-card {
+
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+    min-width: 700px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 40px;
+
+}
+
+#contactPage .contact-card:hover {
+
+    transform: translateY(-10px);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
+
+}
+
+#contactPage .contact-card p {
+
+    font-weight: bolder;
+    font-size: 30px;
+    color: black;
+    margin-top: 12px;
+    font-weight: 300;
+
+}
+
+/* When you hover over the profile containers, the names change to that color */
+#contactPage .contact-card:hover p {
+    
+    color: #ff7043;
+
+}
+
+/*  */
+/*  */
+/*  */
+
+
+/* ---------------------- END ABOUT PAGE ---------------------- */
+
+/* ---------------------- MISSION PAGE STYLING ---------------------- */
+#mission-page {
+
+    background: linear-gradient(135deg, #e3f2fd, #ffffff);
+    padding: 60px 20px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+    margin-top: 40px;
+    display: flex;
+    align-items: center; /* Vertically centers the content */
+    padding: 20px; /* Add some padding for spacing */
+
+}
+
+.mission-container {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-evenly;
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+}
+
+#mission-img {
+
+    height: 300px;
+    width: auto;
+    width: 40%; /* Adjusts the width to fit your design */
+    margin-right: 20px; /* Adds space between the image and the text */
+    margin-top: 200px;
+
+}
+
+.mission-items {
+
+    max-width: 50%; /* Ensures the text doesn't exceed 50% of the section */
+
+}
+
+.mission-items h1 {
+    
+    font-size: 42px;
+    padding-left: 250px;
+    color: #0d47a1;
+    font-weight: 900;
+
+}
+
+.mission-items p {
+
+    font-size: 20px;
+    line-height: 1.8;
+    margin-top: 22px;
+    color: black;
+    font-weight: 300;
+
+}
+
+/* Add a zoom-in effect on images when hovering.*/
+.founder-card img {
+
+    transition: transform 0.3s ease;
+    
+}
+
+.founder-card:hover img {
+
+    transform: scale(1.1);
+
+}
+/* footer styling */
+footer {
+
+    text-align: center; 
+    padding: 20px 0; 
+    background-color: #1a1a1d;
+    color: white; 
+    bottom: 0; /* Position it at the bottom */
+    width: 100%; /* Full width */
+    z-index: 10; /* Ensure it stays on top */
+
+}
+
+
+/* ---------------------- ORDER EXAMPLE ---------------------- */
+
+#OrderLight {
+    
+    width:200px;
+    height:100px;
+    background:red;
+
+}
+
+
+/* ---------------------- BACK TO TOP BUTTON ---------------------- */
+
+
+#back-to-top {
+
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    background-color: #007BFF; 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: none;
+}
+
+#back-to-top:hover {
+
+    background-color: #0056b3; 
+
+}
+ /*--Gallery Section Styling--*/
+
+ .gallery-container {
+
+    background-color: #A0A0A0;
+    background-size: cover;
+    padding: 15px 0;
+    overflow: hidden;
+
+}
+.gallery-spinner {
+
+    display: flex;
+    width: 100%; /* or specific width based on your content */
+    animation: scroll 20s linear; /* Adjust duration as needed */
+
+}
+
+.gallery-item {
+
+    padding: 0 10px;
+
+}
+
+.gallery-item img {
+
+    height: 200px;
+    width: auto;
+    flex-wrap: wrap;
+
+}
+
+   /* Keyframes for the scroll animation */
+   @keyframes scroll {
+    0% {transform: translateX(0);}
+    100% {transform: translateX(-100%);}
+}
+
+/* Hover effect for Gallery Section */
+.gallery-item:hover {
+
+    transform: scale(1.05);
+
+}
+
+.gallery-item:hover img {
+
+    transform: scale(1.1);
+    
+}   
+
+
+/* EXAMPLE FORMAT  */
+/*  */
+/*  */
+
+
+.ExampleClient {
+
+    display: flex;
+    padding-top: 200px;
+    
+}
+
+.Clientside .Partnerside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
